@@ -1,7 +1,9 @@
+import './layout.scss';
+
 export default function App() {
   return (
     <>
-     <h1>Hellow World!</h1> 
+     <div className="layout">Hello</div> 
     </>
   )
 }
