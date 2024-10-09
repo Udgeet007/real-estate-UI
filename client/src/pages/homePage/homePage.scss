@@ -1,3 +1,4 @@
+@import "../../responsive.scss";
 .homePage {
   display: flex;
   height: 100%;
@@ -11,19 +12,38 @@
       padding-right: 100px;
       display: flex;
       flex-direction: column;
+      justify-content: center;
       gap: 50px;
       height: 100%;
 
+      @include medium_Screen{
+        padding: 0;
+      }
+      @include small_Screen{
+        justify-content: flex-start;
+      }
       .title{
         font-size: 64px;
+
+        @include large_Screen{
+          font-size: 48px;
+        }
       }
 
       .boxes{
         display: flex;
         justify-content: space-between;
 
+        @include small_Screen{
+          display: none;
+        }
+
         h1{
           font-size: 36px;
+
+          @include large_Screen{
+            font-size: 32px;
+          }
         }
         h2{
           font-size: 20px;
@@ -40,11 +60,18 @@
     display: flex;
     align-items: center;
 
+    @include medium_Screen{
+      display: none;
+    }
+
     img {
       width: 115%;
       position: absolute;
       right: 0;
 
+      @include large_Screen{
+        width: 105%;
+      }
     }
   }
 
